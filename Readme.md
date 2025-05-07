@@ -7,7 +7,6 @@ This project explores and evaluates two methodologies for leveraging language mo
 1. **Task 1**: An **Advanced Prompt Engineering** system designed for legal clause analysis using chain-of-thought reasoning and few-shot learning techniques.
 2. **Task 2**: A **comparative study** of performance between **prompt engineering** and **fine-tuning** approaches for text classification tasks.
 
-These approaches aim to enhance accuracy, interpretability, and efficiency in identifying legally sensitive clauses and patterns.
 ---
 
 ## Table of Contents
