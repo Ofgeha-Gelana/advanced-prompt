@@ -21,7 +21,7 @@ This project implements two approaches to leverage language models for legal doc
 
 ## Task 1: Advanced Prompt Engineering
 ### System Architecture
-```mermaid
+
 graph TD
     A[User Input] --> B(Document Preprocessing)
     B --> C[Chain-of-Thought Analysis]
@@ -29,3 +29,14 @@ graph TD
     D --> E[Red Flag Detection]
     E --> F[Report Generation]
     F --> G[User Output]
+
+## Task 2: Comparative analysis between fine-tuning and prompt engineering
+```mermaid
+graph LR
+    A[Base Model] --> B[Prompt Engineering]
+    A --> C[Fine-tuning]
+    B --> D[Prediction]
+    C --> E[Prediction]
+    D --> F[Comparison]
+    E --> F
+    F --> G[Analysis]
