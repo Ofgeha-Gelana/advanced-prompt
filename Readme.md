@@ -8,10 +8,6 @@ This project explores and evaluates two methodologies for leveraging language mo
 2. **Task 2**: A **comparative study** of performance between **prompt engineering** and **fine-tuning** approaches for text classification tasks.
 
 These approaches aim to enhance accuracy, interpretability, and efficiency in identifying legally sensitive clauses and patterns.
-
-![Workflow Diagram](placeholder_workflow_diagram.png)
-<!-- Replace with your actual diagram path -->
-
 ---
 
 ## Table of Contents
@@ -67,8 +63,8 @@ The objective is to empirically evaluate the trade-offs in accuracy, cost, laten
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/legal-llm-comparison.git
-cd legal-llm-comparison
+git clone https://github.com/Ofgeha-Gelana/advanced-prompt.git
+cd advanced-prompt
 ```
 
 2. Create a virtual environment and install dependencies:
@@ -91,12 +87,12 @@ pip install torch torchvision torchaudio --extra-index-url https://download.pyto
 
 ### Run Task 1 (Prompt Engineering):
 ```bash
-python run_prompt_engineering.py --input path/to/legal_doc.txt
+python usecase.ipynb and second_usecase.ipynb
 ```
 
 ### Run Task 2 (Model Comparison):
 ```bash
-python run_model_comparison.py --input path/to/legal_doc.txt
+python finetuned-vs-prompt.ipynb and evaluation.ipynb
 ```
 
 Results will be saved to the `outputs/` directory.
@@ -110,7 +106,6 @@ Results will be saved to the `outputs/` directory.
 | Prompt Engineering| 87.5%    | ~300ms         | 500MB      | No training required        |
 | Fine-Tuned Model  | 91.2%    | ~120ms         | 420MB      | Requires labeled dataset    |
 
-Detailed reports and graphs can be found in the `results/` directory.
 
 ---
 
@@ -128,18 +123,3 @@ Detailed reports and graphs can be found in the `results/` directory.
 
 ---
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature-name`)
-5. Open a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
