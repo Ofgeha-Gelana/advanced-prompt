@@ -123,7 +123,6 @@ python usecase.ipynb and second_usecase.ipynb
 python finetuned-vs-prompt.ipynb and evaluation.ipynb
 ```
 
-Results will be saved to the `outputs/` directory.
 
 ---
 
