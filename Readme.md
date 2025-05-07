@@ -25,13 +25,42 @@ This project explores and evaluates two methodologies for leveraging language mo
 ### System Architecture
 
 ```mermaid
-graph TD
-    A[User Input] --> B[Document Preprocessing]
-    B --> C[Chain-of-Thought Analysis]
-    C --> D[Few-Shot Learning]
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffd8d8', 'edgeLabelBackground':'#ffffff'}}}%%
+flowchart TD
+    A[User Input] --> B{Document Preprocessing}
+    B -->|Clean Text| C[Chain-of-Thought Analysis]
+    B -->|Edge Case Detected| Z[Handle Edge Case]
+    C --> C1[Identify Document Type]
+    C --> C2[Extract Key Sections]
+    C --> C3[Analyze Clause Implications]
+    C1 --> D[Few-Shot Learning Application]
+    C2 --> D
+    C3 --> D
+    D --> D1[Apply Learned Examples]
+    D --> D2[Generate Formatted Output]
+    D --> D3[Enforce JSON Structure]
     D --> E[Red Flag Detection]
+    E --> E1[Unusual Terms]
+    E --> E2[One-Sided Clauses]
+    E --> E3[Regulatory Risks]
     E --> F[Report Generation]
+    F --> F1[Executive Summary]
+    F --> F2[Risk Assessment]
+    F --> F3[Recommended Actions]
     F --> G[User Output]
+    G --> G1[Markdown Report]
+    G --> G2[Term Explanations]
+    G --> G3[Red Flag Alerts]
+    
+    %% Style Definitions
+    classDef user fill:#e1f5fe,stroke:#039be5;
+    classDef process fill:#e8f5e9,stroke:#43a047;
+    classDef analysis fill:#fff3e0,stroke:#fb8c00;
+    classDef output fill:#f3e5f5,stroke:#8e24aa;
+    class A,G1,G2,G3 user;
+    class B,Z,D,E,F process;
+    class C,C1,C2,C3,D1,D2,D3,E1,E2,E3 analysis;
+    class F1,F2,F3 output;
 ```
 
 This pipeline enables modular, interpretable clause-level legal analysis using large language models (LLMs) without the need for model retraining.
